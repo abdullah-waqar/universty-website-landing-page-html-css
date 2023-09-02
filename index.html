@@ -7,14 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <title>University Website</title>
 </head>
 <body>
+
+    <!-- HEADER SECTION -->
     <section class="header">
         <nav>
             <a href="index.html"><img src="eduford_img/logo.png" alt="Logo of the university"></a>
 
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()" ></i>
+
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -22,7 +27,11 @@
                     <li><a href="">BLOG</a></li>
                     <li><a href="">CONTENT</a></li>
                 </ul>
+
             </div>
+
+            
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
 
         <div class="text-box">
@@ -32,5 +41,29 @@
         </div>
 
     </section>
+
+    <!-- Course Section -->
+
+    <section class="course">
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, sint.</p>
+    </section>
+
+
+<!-- JAVASCRIPT TO HIDE AND SHOW MENU -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        
+        function showMenu()
+        {
+            navLinks.style.right = "0";
+        }
+
+        function hideMenu()
+        {
+            navLinks.style.right = "-200px";
+        }
+    </script>
+
 </body>
 </html> 
